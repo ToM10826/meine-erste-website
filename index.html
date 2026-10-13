@@ -4,179 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Internes Markenprofil | Apex Gear</title>
+  <title>Apex Gear | Strategie-Hub</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="theme.js"></script>
-  <style>
-    :root {
-      --paper: #f3f1ea;
-      --surface: #e9e6dd;
-      --ink: #30312b;
-      --muted: #56574e;
-      --gold: #806326;
-      --line: rgba(58, 56, 46, 0.18);
-      --white: #ffffff;
-      font-family: Inter, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-    }
-
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); }
-    a { color: inherit; }
-    .wrap { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
-    .topbar { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.65); }
-    .topbar-inner { display: flex; justify-content: space-between; align-items: center; min-height: 68px; }
-    .brand { font: 600 16px 'Cormorant Garamond', serif; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
-    .eyebrow, .label { font: 10px 'Space Mono', monospace; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
-    .hero { padding: 76px 0 64px; border-bottom: 1px solid var(--line); background: linear-gradient(115deg, #f3f1ea 0%, #e9e6dd 72%, #d6d2c6 100%); }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { max-width: 760px; margin: 18px 0 20px; font: 500 clamp(46px, 7vw, 82px)/.94 'Cormorant Garamond', serif; }
-    .intro { max-width: 650px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
-    main { padding: 52px 0 80px; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-    h2 { margin-bottom: 0; font: 500 38px/1 'Cormorant Garamond', serif; }
-    .section-note { margin: 0; color: var(--muted); font-size: 12px; }
-    .audiences { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); margin-top: 24px; }
-    .audience { min-height: 218px; padding: 24px; background: rgba(255,255,255,.42); }
-    .audience + .audience { border-left: 1px solid var(--line); }
-    .number { color: var(--gold); font: 11px 'Space Mono', monospace; }
-    h3 { margin: 30px 0 10px; font: 500 27px/1.05 'Cormorant Garamond', serif; }
-    .audience p, .office p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .personas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
-    .persona-card { padding: 24px; border: 1px solid var(--line); background: rgba(255,255,255,.48); }
-    .persona-name { margin: 18px 0 5px; font: 500 27px/1.05 'Cormorant Garamond', serif; }
-    .persona-role { margin: 0; color: var(--muted); font-size: 11px; }
-    .persona-vision { min-height: 84px; margin: 22px 0; padding: 15px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--ink); font: italic 17px/1.45 'Cormorant Garamond', serif; }
-    .persona-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .persona-data h4 { margin: 0 0 9px; color: var(--gold); font: 10px 'Space Mono', monospace; letter-spacing: .12em; text-transform: uppercase; }
-    .persona-data p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
-    .offices { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); margin-top: 22px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .office { padding: 22px 24px 24px 0; }
-    .office + .office { border-left: 1px solid var(--line); padding-left: 24px; }
-    .office h3 { margin: 14px 0 8px; }
-    .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 24px; background: var(--line); border: 1px solid var(--line); }
-    .type-sample { min-height: 190px; padding: 26px; background: var(--paper); }
-    .type-sample p { margin: 18px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
-    .display-sample { font: 500 43px/1 'Cormorant Garamond', serif; }
-    .sans-sample { font: 500 26px/1.15 Inter, sans-serif; }
-    .mono-sample { font: 14px 'Space Mono', monospace; letter-spacing: .04em; }
-    .palette { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 12px; margin-top: 24px; }
-    .swatch { overflow: hidden; border: 1px solid var(--line); background: var(--white); }
-    .chip { height: 92px; background: var(--chip); border-bottom: 1px solid var(--line); }
-    .swatch-copy { padding: 12px; }
-    .swatch-copy strong { display: block; font-size: 12px; font-weight: 600; }
-    .swatch-copy span { display: block; margin-top: 5px; color: var(--muted); font: 10px 'Space Mono', monospace; }
-    footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
-    @media (max-width: 760px) {
-      .wrap { width: min(100% - 32px, 560px); }
-      .hero { padding: 54px 0 44px; }
-      .section-head { align-items: start; flex-direction: column; }
-      .audiences { grid-template-columns: 1fr 1fr; }
-      .audience:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
-      .audience:nth-child(4) { border-top: 1px solid var(--line); }
-      .personas { grid-template-columns: 1fr; }
-      .persona-vision { min-height: 0; }
-      .offices { grid-template-columns: 1fr; }
-      .office, .office + .office { padding: 20px 0; border-left: 0; }
-      .office + .office { border-top: 1px solid var(--line); }
-      .type-grid { grid-template-columns: 1fr; }
-      .palette { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-    @media (max-width: 420px) {
-      .audiences { grid-template-columns: 1fr; }
-      .audience + .audience, .audience:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap topbar-inner"><a class="brand" href="index.html">Apex Gear</a><a class="label" href="index.html">Zur Website</a></div>
+  <header class="topbar" id="dashboard">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#dashboard">Apex Gear</a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+  <a href="index.html#dashboard">Dashboard</a>
+  <a href="index.html#projektphasen">Projekt</a>
+  <a href="index.html#ressourcen">Konzept</a>
+  <details class="page-menu">
+    <summary>Unterseiten</summary>
+    <div class="page-menu-list">
+      <a href="personas.html">Personas</a>
+      <a href="user-journeys.html">User Journeys</a>
+      <a href="content-flow.html">Content Flow</a>
+      <a href="tone-of-voice.html">Tone of Voice</a>
+      <a href="conversion-mapping.html">Conversion Mapping</a>
+      <a href="design-system.html">Design System</a>
+      <a href="ai-prototyping.html">AI Prototyping</a>
+      <a href="markenprofil.html">Markenprofil</a>
+    </div>
+  </details>
+</nav>
+    </div>
   </header>
-  <section class="hero">
+  <section class="hero hub-hero">
     <div class="wrap">
-      <p class="eyebrow">Internes Markenprofil · nicht in der Navigation</p>
-      <h1>Zielgruppen, Typografie<br />und Farbwelt.</h1>
-      <p class="intro">Kompakte Referenz für die Ausrichtung von Apex Gear. Die Marke verbindet hochwertige Performance-Bekleidung mit zurückhaltendem Luxus und persönlicher Betreuung.</p>
+      <p class="eyebrow">Strategie · Design · digitale Erlebnisse</p>
+      <h1>Performance.<br />Klar gedacht.</h1>
+      <p class="intro">Der Strategie-Hub von Apex Gear. Hier entsteht ein digitaler Auftritt für technische Outdoor-Bekleidung, der anspruchsvolle Produkte verständlich macht und Menschen sicher zur passenden Ausrüstung führt.</p>
+      <a class="hero-link" href="#projektphasen">Projektübersicht entdecken&nbsp; ↓</a>
     </div>
   </section>
-  <main class="wrap">
-    <section aria-labelledby="audience-title">
-      <div class="section-head"><div><p class="eyebrow">Kundinnen und Kunden</p><h2 id="audience-title">Zielgruppen</h2></div><p class="section-note">Bedürfnisse und Nutzung stehen vor Demografie.</p></div>
-      <div class="audiences">
-        <article class="audience"><span class="number">01 / EXECUTIVE</span><h3>Vielreisende Führungskräfte</h3><p>Menschen mit internationalem Alltag, die komfortable, gepflegte Kleidung für wechselnde Termine und Klimazonen suchen.</p></article>
-        <article class="audience"><span class="number">02 / PERFORMANCE</span><h3>Anspruchsvolle Aktive</h3><p>Outdoor- und Bewegungsorientierte, die technische Materialien, zuverlässigen Wetterschutz und Bewegungsfreiheit erwarten.</p></article>
-        <article class="audience"><span class="number">03 / LUXURY</span><h3>Designbewusste Premiumkunden</h3><p>Kundschaft, die hochwertige Verarbeitung, klare Silhouetten und dezente statt auffällige Statussignale schätzt.</p></article>
-        <article class="audience"><span class="number">04 / PRIVATE</span><h3>Persönlich Beratene</h3><p>VIP- und Atelierkundschaft, die individuelle Passform, persönliche Kontakte und diskreten Service bevorzugt.</p></article>
+  <main class="wrap hub-main">
+    <section class="hub-section" id="projektphasen" aria-labelledby="phases-title">
+      <div class="section-head"><div><p class="eyebrow">Der Weg zum digitalen Auftritt</p><h2 id="phases-title">Projektphasen</h2></div><p class="section-note">Arbeitsstand: Konzeptentwurf für Apex Gear.</p></div>
+      <div class="phase-grid">
+        <article class="phase"><div class="phase-step"><span>01</span><span>✓</span></div><h3>Discovery</h3><p>Markenkern, Sortiment und Nutzungssituationen erfassen.</p><span class="phase-state">Grundlage vorhanden</span></article>
+        <article class="phase"><div class="phase-step"><span>02</span><span>◉</span></div><h3>Konzept</h3><p>Personas, Journeys und Informationsarchitektur.</p><span class="phase-state">Konzeptentwurf</span></article>
+        <article class="phase"><div class="phase-step"><span>03</span><span>○</span></div><h3>Design</h3><p>Designsystem, Produkterlebnis und Prototypen.</p><span class="phase-state">Vorgeschlagen</span></article>
+        <article class="phase"><div class="phase-step"><span>04</span><span>○</span></div><h3>Entwicklung</h3><p>Responsiver Shop, Produktdaten und CMS.</p><span class="phase-state">Noch offen</span></article>
+        <article class="phase"><div class="phase-step"><span>05</span><span>○</span></div><h3>Launch</h3><p>Qualitätssicherung, Inhalte und Monitoring.</p><span class="phase-state">Noch offen</span></article>
       </div>
     </section>
-    <section aria-labelledby="personas-title" style="margin-top:58px">
-      <div class="section-head"><div><p class="eyebrow">Führungsteam</p><h2 id="personas-title">Personas</h2></div><p class="section-note">Vision, Vorlieben und persönliche Arbeitsweisen.</p></div>
-      <div class="personas">
-        <article class="persona-card">
-          <span class="label">01 / Geschäftsführung</span>
-          <h3 class="persona-name">Univ.-Prof. Dr. Mag. Mag. Tobias Märzinger, MSc</h3>
-          <p class="persona-role">Gründer & Geschäftsführer</p>
-          <p class="persona-vision">Outdoor-Performance und lautlosen Luxus der Haute Couture kompromisslos verbinden.</p>
-          <div class="persona-columns">
-            <div class="persona-data"><h4>Hobbys</h4><p>Alpinwandern<br />Architektur<br />Uhren sammeln</p></div>
-            <div class="persona-data"><h4>Top 3</h4><p>Klare Vision<br />Mutige Entscheidungen<br />Qualitätsbewusstsein</p></div>
-            <div class="persona-data"><h4>Flop 3</h4><p>Ungeduld<br />Perfektionismus<br />Zu wenig Pausen</p></div>
-          </div>
-        </article>
-        <article class="persona-card">
-          <span class="label">02 / Globale Logistik</span>
-          <h3 class="persona-name">Dr. Elena Vance</h3>
-          <p class="persona-role">Leitung globale Logistik</p>
-          <p class="persona-vision">Eine zuverlässige, möglichst emissionsarme Lieferkette mit persönlicher Übergabe schaffen.</p>
-          <div class="persona-columns">
-            <div class="persona-data"><h4>Hobbys</h4><p>Segeln<br />Keramik<br />Langstreckenlauf</p></div>
-            <div class="persona-data"><h4>Top 3</h4><p>Organisationstalent<br />Ruhe unter Druck<br />Blick fürs Detail</p></div>
-            <div class="persona-data"><h4>Flop 3</h4><p>Überplanung<br />Direkte E-Mails<br />Schwer abschalten</p></div>
-          </div>
-        </article>
-        <article class="persona-card">
-          <span class="label">03 / Forschung & Entwicklung</span>
-          <h3 class="persona-name">Marcus Thorne</h3>
-          <p class="persona-role">Leitung Forschung & Entwicklung</p>
-          <p class="persona-vision">Raumfahrttechnologie in leise, komfortable und alltagstaugliche Performance-Textilien übersetzen.</p>
-          <div class="persona-columns">
-            <div class="persona-data"><h4>Hobbys</h4><p>Bouldern<br />Analoge Fotografie<br />Materialkunde</p></div>
-            <div class="persona-data"><h4>Top 3</h4><p>Neugier<br />Präzision<br />Ausdauer</p></div>
-            <div class="persona-data"><h4>Flop 3</h4><p>Prototypen bis spät<br />Essen vergessen<br />Übermäßige Skepsis</p></div>
-          </div>
-        </article>
+    <section class="hub-section" id="ressourcen" aria-labelledby="resources-title">
+      <div class="section-head"><div><p class="eyebrow">Strategie-Bibliothek</p><h2 id="resources-title">Projektressourcen</h2></div><p class="section-note">Jeder Bereich führt direkt zum passenden Konzept.</p></div>
+      <div class="resource-grid">
+        <a class="resource-card" href="personas.html"><span class="resource-icon">01 / PEOPLE</span><h3>Personas</h3><p>Zielgruppen und archetypische Bedürfnisse.</p></a>
+        <a class="resource-card" href="user-journeys.html"><span class="resource-icon">02 / PATHS</span><h3>User Journeys</h3><p>Vom ersten Tourenplan bis zur langfristigen Nutzung.</p></a>
+        <a class="resource-card" href="content-flow.html"><span class="resource-icon">03 / STRUCTURE</span><h3>Content Flow</h3><p>Informationsarchitektur für Sortiment und Service.</p></a>
+        <a class="resource-card" href="tone-of-voice.html"><span class="resource-icon">04 / LANGUAGE</span><h3>Tone of Voice</h3><p>Eine klare, glaubwürdige Sprache für Apex Gear.</p></a>
+        <a class="resource-card" href="conversion-mapping.html"><span class="resource-icon">05 / ACTION</span><h3>Conversion Mapping</h3><p>Inhalte mit sinnvollen nächsten Schritten verbinden.</p></a>
+        <a class="resource-card" href="design-system.html"><span class="resource-icon">06 / VISUALS</span><h3>Design System</h3><p>Farben, Typografie und wiedererkennbare Bausteine.</p></a>
+        <a class="resource-card" href="ai-prototyping.html"><span class="resource-icon">07 / LAB</span><h3>AI Prototyping</h3><p>Konzept für eine persönliche Layering-Beratung.</p></a>
+        <a class="resource-card" href="markenprofil.html"><span class="resource-icon">08 / BRAND</span><h3>Markenprofil</h3><p>Zielgruppen, Standorte und Sortiment.</p></a>
       </div>
     </section>
-    <section aria-labelledby="office-title" style="margin-top:58px">
-      <div class="section-head"><div><p class="eyebrow">Unternehmensstandorte</p><h2 id="office-title">Drei Sitze, weltweite Kontakte</h2></div></div>
-      <div class="offices">
-        <article class="office"><span class="label">Hauptsitz</span><h3>Österreich</h3><p>Zentrale Unternehmensführung und Koordination.</p></article>
-        <article class="office"><span class="label">Zweitsitz</span><h3>Schweiz</h3><p>Persönliche Betreuung und enge Kontakte in der Region.</p></article>
-        <article class="office"><span class="label">Drittsitz</span><h3>Dubai</h3><p>Standort und Kontaktbasis für die Region und internationale Verbindungen.</p></article>
-      </div>
-    </section>
-    <section aria-labelledby="type-title" style="margin-top:58px">
-      <div class="section-head"><div><p class="eyebrow">Schriftbild</p><h2 id="type-title">Schriftfamilien</h2></div></div>
-      <div class="type-grid">
-        <article class="type-sample"><span class="label">Display · Überschriften</span><p class="display-sample">Cormorant Garamond</p><p>Elegante Serifenschrift für Headlines, Produktnamen und prägnante Zitate.</p></article>
-        <article class="type-sample"><span class="label">Sans · Lesetext</span><p class="sans-sample">Inter für klare Lesbarkeit</p><p>Ruhige, gut lesbare Grotesk für Navigation, Fließtext und Formulare.</p></article>
-        <article class="type-sample"><span class="label">Mono · Kennzeichnungen</span><p class="mono-sample">SPACE MONO / 01—03</p><p>Technische Akzente für Materialangaben, Serien, Preise und kurze Metadaten.</p></article>
-      </div>
-    </section>
-    <section aria-labelledby="color-title" style="margin-top:58px">
-      <div class="section-head"><div><p class="eyebrow">Design-Tokens</p><h2 id="color-title">Farbpalette</h2></div></div>
-      <div class="palette">
-        <div class="swatch"><div class="chip" style="--chip:#f3f1ea"></div><div class="swatch-copy"><strong>Paper</strong><span>#F3F1EA</span></div></div>
-        <div class="swatch"><div class="chip" style="--chip:#e9e6dd"></div><div class="swatch-copy"><strong>Surface</strong><span>#E9E6DD</span></div></div>
-        <div class="swatch"><div class="chip" style="--chip:#30312b"></div><div class="swatch-copy"><strong>Ink</strong><span>#30312B</span></div></div>
-        <div class="swatch"><div class="chip" style="--chip:#56574e"></div><div class="swatch-copy"><strong>Muted</strong><span>#56574E</span></div></div>
-        <div class="swatch"><div class="chip" style="--chip:#806326"></div><div class="swatch-copy"><strong>Accent Gold</strong><span>#806326</span></div></div>
-      </div>
+    <section class="hub-section" aria-labelledby="journey-title">
+      <div class="section-head"><div><p class="eyebrow">Nächster Schritt</p><h2 id="journey-title">Die Journey im Detail</h2></div></div>
+      <p class="company-intro">Vom passenden Einstieg über verständliche Produktauswahl bis zu Pflege und Reparatur: Die Customer Journey führt Schritt für Schritt durch den Apex Gear Shop.</p>
+      <a class="hero-link" href="user-journeys.html">User Journey ansehen&nbsp; →</a>
     </section>
   </main>
-  <footer><div class="wrap">Interne Referenz · Apex Gear</div></footer>
+  <footer class="site-footer"><div class="wrap">Apex Gear · Strategischer Konzeptentwurf · Produkteigenschaften und Unternehmensangaben vor Veröffentlichung verifizieren.</div></footer>
 </body>
 </html>

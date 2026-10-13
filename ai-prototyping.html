@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <title>AI Prototyping | Apex Gear</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="detail.css" />
+</head>
+<body>
+  <header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="index.html#dashboard">Apex Gear</a><nav class="main-nav" aria-label="Hauptnavigation">
+  <a href="index.html#dashboard">Dashboard</a>
+  <a href="index.html#projektphasen">Projekt</a>
+  <a href="index.html#ressourcen">Konzept</a>
+  <details class="page-menu">
+    <summary>Unterseiten</summary>
+    <div class="page-menu-list">
+      <a href="personas.html">Personas</a>
+      <a href="user-journeys.html">User Journeys</a>
+      <a href="content-flow.html">Content Flow</a>
+      <a href="tone-of-voice.html">Tone of Voice</a>
+      <a href="conversion-mapping.html">Conversion Mapping</a>
+      <a href="design-system.html">Design System</a>
+      <a href="ai-prototyping.html">AI Prototyping</a>
+      <a href="markenprofil.html">Markenprofil</a>
+    </div>
+  </details>
+</nav></div></header>
+  <section class="hero"><div class="wrap"><p class="breadcrumb"><a href="index.html#dashboard">Apex Gear</a><span>/</span><a href="index.html#ressourcen">Projektressourcen</a><span>/</span>AI Prototyping</p><p class="eyebrow">07 / Experimentierfeld</p><h1>Ein Layering-Vorschlag, der seine Logik offenlegt.</h1><p class="lead">Der klickbare Entwurf fragt Einsatz und Wetter ab und schlägt ein nachvollziehbares Bekleidungssystem vor. Es handelt sich um Beispielregeln, nicht um eine echte KI-Beratung oder bestätigte Produktempfehlung.</p></div></section>
+  <main class="wrap">
+    <section class="content-section"><div class="section-heading"><div><p class="eyebrow">Layering-Berater</p><h2>Was steht bei dir an?</h2></div></div><form class="prototype-form" id="layering-form">
+      <label for="activity">Einsatz<select id="activity" name="activity"><option value="tour">Alpine Tagestour</option><option value="trekking">Mehrtagestrekking</option><option value="travel">Reise und Alltag</option></select></label>
+      <label for="weather">Bedingung<select id="weather" name="weather"><option value="mild">Mild und trocken</option><option value="changeable">Wechselhaft</option><option value="cold">Kalt und windig</option></select></label>
+      <button type="submit">Kombination anzeigen</button>
+    </form><p class="prototype-result" id="prototype-result" aria-live="polite">Wähle Einsatz und Wetter, um eine Beispiel-Kombination zu sehen.</p><div class="callout">Die Empfehlung erklärt, welche Schicht welche Aufgabe übernimmt. Tatsächliche Eignung und Leistungswerte müssen anhand verifizierter Produktdaten geprüft werden.</div></section>
+    <section class="content-section"><div class="columns two"><article class="info-block"><h3>Warum diese Funktion?</h3><p>Wer noch kein Layering-System kennt, braucht Hilfe bei der Auswahl und nicht bloß eine weitere Produktliste. Der Einstieg über konkrete Bedingungen macht den Bedarf greifbar.</p></article><article class="info-block"><h3>Was vor einem echten Einsatz nötig ist</h3><p>Verifizierte Produktdaten, transparente Empfehlungsregeln, Alternativen und ein klarer Hinweis auf Unsicherheit. Kundinnen und Kunden müssen jede Eingabe einfach ändern können.</p></article></div><a class="text-link" href="markenprofil.html">Weiter zum Markenprofil →</a></section>
+    <nav class="resource-nav" aria-label="Ressourcennavigation"><a href="design-system.html">← Design System</a><a class="all" href="index.html#ressourcen">Alle Ressourcen</a><a class="next" href="markenprofil.html">Nächste: Markenprofil →</a></nav>
+  </main><footer><div class="wrap">Apex Gear · Interaktiver Konzeptentwurf · Keine echte KI-Beratung; Beispieldaten vor Veröffentlichung ersetzen.</div></footer>
+  <script>
+    const layeringForm = document.getElementById('layering-form');
+    const layeringResult = document.getElementById('prototype-result');
+    layeringForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const activity = document.getElementById('activity').value;
+      const weather = document.getElementById('weather').value;
+      const baseLayer = activity === 'travel' ? 'Meridian Travel Jacket' : 'Apex Merino 180';
+      const midLayer = weather === 'cold' ? 'Ridge Grid Fleece' : 'leichte Isolationsschicht nach Bedarf';
+      const shell = weather === 'changeable' || weather === 'cold' ? 'Eiger Shell 3L' : 'Shell nur bei Wetterumschwung ergänzen';
+      const trip = activity === 'trekking' ? 'Für Mehrtagestrekking' : activity === 'travel' ? 'Für Reise und Alltag' : 'Für die alpine Tagestour';
+      layeringResult.textContent = `${trip}: ${baseLayer} als Basis, ${midLayer} und ${shell}. Konzeptvorschlag; tatsächliche Produkteignung bitte anhand verifizierter Produktdaten prüfen.`;
+    });
+  </script>
+</body>
+</html>
